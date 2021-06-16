@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>SRIT VIRTUAL EXPO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .downloadButton {
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .rotator {
+            transform: rotate(180deg);
+        }
+        
+        span.icon {
+            float: left;
+            width: 0.7em;
+            font-size: 400%;
+            font-family: algerian, courier;
+            line-height: 80%;
+            transition: transform 0.5s;
+        }
+        
+        .brmedium {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <script>
+        function rotateIt(id) {
+            var element = document.getElementById(id);
+            element.classList.add("rotator");
+            setTimeout(() => {
+                element.classList.remove("rotator");
+            }, 500);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <center>
+        <a href="#">
+            <button class="downloadButton" onclick="rotateIt('icon32bit')">
+                <span id="icon32bit" class="icon"><i class="fa fa-android"
+                        style="font-size:24px"></i></span>
+                DOWNLOAD App (v1.0.1) 32bit OS
+                <span class="brmedium"></span>
+                <center>(19.8Mb)</center>
+            </button>
+        </a>
+        <a href="#">
+            <button class="downloadButton" onclick="rotateIt('icon64bit')">
+                <span id="icon64bit" class="icon"><i class="fa fa-android" style="font-size:24px"></i></span>
+                DOWNLOAD App (v1.0.1) 64bit OS
+                <span class="brmedium"></span>
+                <center>(20.3Mb)</center>
+            </button>
+        </a>
+        <br><br> Unable to download with the above options ?
+        <a href="" style="text-decoration: none;">CLICK HERE</a>
+    </center>
+</body>
+
+</html>
